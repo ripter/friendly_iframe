@@ -20,9 +20,9 @@ module.exports = function(url, api) {
 
   // Now load the script at url.
   doc = iframe.contentWindow.document;
-  doc.open().write('<body onload="' +
-    'var js = document.createElement(\'script\');' +
-    'js.src = "'+ url +'";' +
+  doc.open().write('<body onload="'+
+    'var js = document.createElement(\'script\');'+
+    'js.src = \''+ url + '\';'+
     'document.body.appendChild(js);">');
   doc.close();
 
