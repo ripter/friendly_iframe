@@ -10,6 +10,7 @@ const $ = require('jquery');
 const fif = require('friendly_iframe');
 
 // Load the rest of the code.
+// Pass in jquery as window.API.$
 fif('js/iceberg.bundle.js', {
   $: $
 });
@@ -29,6 +30,6 @@ The first option might be to stop using `Object.keys()` and instead use somethin
 
 Our best hope is Iceberg loading. In this process we have two Javascript files. `surface.js` and `iceberg.js`.
 
-`surface.js` is an IIFE that contains everything we need to manipulate the page. This is our risk surface. It will still get broken or hacked native functions on the page. But we can make surface as small as possible.
+`surface.js` is an IIFE that contains everything we need to manipulate the page. This is our risk surface. It will still get the broken or hacked native functions on the page. But we can make surface as small as possible.
 
 `iceberg.js` is the rest of our code. It doesn't matter if it is IIFE or not, because it is the only script in the iframe. The risk is reduced to just iframe origin issues. And since it's a friendly iframe, the origin is already set to the page.
