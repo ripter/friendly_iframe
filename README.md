@@ -7,10 +7,10 @@ The friendly iframe can be used to load iceberg code onto the page. This is code
 `surface.js`:
 ```
 const $ = require('jquery');
-const FIF = require('friendly_iframe');
+const fif = require('friendly_iframe');
 
-// Load iceberg.js inside a friendly iframe and provide jquery in the API.
-FIF('iceberg.js', {
+// Load the rest of the code.
+fif('js/iceberg.bundle.js', {
   $: $
 });
 ```

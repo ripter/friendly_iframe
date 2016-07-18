@@ -1,6 +1,6 @@
 {
   "name": "friendly_iframe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load a script inside of a friendly iframe with a surface API",
   "main": "src/index.js",
   "scripts": {
